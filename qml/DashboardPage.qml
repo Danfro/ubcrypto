@@ -125,9 +125,9 @@ Page {
 
                 Repeater {
                     model: [
-                        { name: " All " },
-                        { name: " Top Gainers " },
-                        { name: " Top Losers " }
+                        { name: i18n.tr("All") },
+                        { name: i18n.tr("Top Gainers") },
+                        { name: i18n.tr("Top Losers") }
                     ]
                     delegate: MouseArea {
                         width: units.gu(12)
@@ -163,7 +163,7 @@ Page {
 
             TextField {
                 id: searchBox
-                placeholderText: "Search coins..."
+                placeholderText: i18n.tr("Search coins...")
                 anchors.fill: parent
                 font.pixelSize: units.gu(2)
                 onTextChanged: {
@@ -237,14 +237,14 @@ Page {
                 width: parent.width // Make Column take full width of emptyState
 
                 Label {
-                    text: "No data available."
+                    text: i18n.tr("No data available.")
                     font.pixelSize: units.gu(2.2)
                     horizontalAlignment: Text.AlignHCenter
                     width: parent.width // Make Label fill its parent Column horizontally
                 }
 
                 Button {
-                    text: "Refresh"
+                    text: i18n.tr("Refresh")
                     anchors.horizontalCenter: parent.horizontalCenter // Keep centering for the Button
                     onClicked: {
                         var coins = DB.getAllCoins();

@@ -1,5 +1,4 @@
 build
-po
 *.user.*
 *.user
 __pycache__

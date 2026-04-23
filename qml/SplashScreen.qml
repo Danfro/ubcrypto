@@ -27,7 +27,7 @@ Rectangle {
         }
 
         Text {
-            text: "UBCrypto"
+            text: i18n.tr("UBCrypto")
             font.pixelSize: units.gu(4)
             font.bold: true
             color: "#333"
@@ -38,7 +38,7 @@ Rectangle {
         // --- Your Catchy Tagline with a simple Fade-In Animation ---
         Text {
             id: taglineText // Added an ID for clarity
-            text: "Your Market Insights, Instantly."
+            text: i18n.tr("Your Market Insights, Instantly.")
             font.pixelSize: units.gu(2.2)
             color: "#666"
             horizontalAlignment: Text.AlignHCenter

@@ -28,7 +28,7 @@ Item {
             Layout.fillWidth: true
 
             Text {
-                text: "1h:"
+                text: i18n.tr("1h:")
                 color: AppTheme.getThemeColors(theme.name).textColorPrimary
                 font.pixelSize: units.gu(1.8)
             }
@@ -61,7 +61,7 @@ Item {
             Layout.fillWidth: true
 
             Text {
-                text: "24h:"
+                text: i18n.tr("24h:")
                 color:  AppTheme.getThemeColors(theme.name).textColorPrimary
                 font.pixelSize: units.gu(1.8)
             }
@@ -91,7 +91,7 @@ Item {
         RowLayout {
             Layout.fillWidth: true
             Text {
-                text: "7d:"
+                text: i18n.tr("7d:")
                 color: "#AAA"
                 font.pixelSize: units.gu(1.5)
             }
@@ -109,7 +109,7 @@ Item {
         RowLayout {
             Layout.fillWidth: true
             Text {
-                text: "30d:"
+                text: i18n.tr("30d:")
                 color: "#AAA"
                 font.pixelSize: units.gu(1.5)
             }

@@ -18,7 +18,7 @@ Page {
             actions: [
                 Action {
                     iconName: "view-refresh"
-                    text: "Refresh"
+                    text: i18n.tr("Refresh")
                     onTriggered: loadAllFeeds()
                 }
             ]
@@ -215,7 +215,7 @@ Page {
                     }
 
                     Text {
-                        text: "Read More"
+                        text: i18n.tr("Read More")
                         Layout.fillWidth: true
                         font.pixelSize:  units.gu(1.5)
                         color: linkColor

@@ -13,7 +13,7 @@ Item {
     // Title
     Text {
         id: chartTitle
-        text: "Portfolio Value Over Time"
+        text: i18n.tr("Portfolio Value Over Time")
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
         font.pixelSize: units.gu(2) // Assuming units is defined elsewhere, or use a fixed pixel size like 20
@@ -30,7 +30,7 @@ Item {
         ValueAxis {
             id: yAxis
             min: 0
-            titleText: "Value (€)"
+            titletext: i18n.tr("Value ($)")
         }
 
         // ***** CHANGE THIS LINE *****
@@ -47,7 +47,7 @@ Item {
 
         DateTimeAxis {
             id: xAxis
-            titleText: "Date"
+            titletext: i18n.tr("Date")
             format: "MM-dd" // Or "yyyy-MM-dd", adjust as per clutter tips
             tickCount: 5
             labelsAngle: -45 // Keeps labels from overlapping

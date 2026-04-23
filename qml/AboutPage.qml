@@ -26,7 +26,7 @@ Page {
 
             // --- Section: About UBCrypto ---
             Text {
-                text: "UBCrypto"
+                text: i18n.tr("UBCrypto")
                 color:AppTheme.getThemeColors(theme.name).textColorPrimary
                 font.pixelSize: units.gu(3) // Larger font for app name
                 font.bold: true
@@ -35,7 +35,7 @@ Page {
             }
 
             Text {
-                text: "Your essential lightweight cryptocurrency tracking app for Ubuntu Touch. Stay informed with live market data, manage your personal portfolio, and enjoy a clean, intuitive user interface designed for mobile."
+                text: i18n.tr("Your essential lightweight cryptocurrency tracking app for Ubuntu Touch. Stay informed with live market data, manage your personal portfolio, and enjoy a clean, intuitive user interface designed for mobile.")
                 font.pixelSize: units.gu(1.8)
                 color:AppTheme.getThemeColors(theme.name).textColorPrimary
                 width: parent.width
@@ -48,7 +48,7 @@ Page {
 
             // --- Section: Key Features ---
             Text {
-                text: "Key Features"
+                text: i18n.tr("Key Features")
                 font.pixelSize: units.gu(2.2) // Heading size
                 font.bold: true
                 color:AppTheme.getThemeColors(theme.name).textColorPrimary
@@ -77,7 +77,7 @@ Page {
 
             // --- Section: Links ---
             Text {
-                text: "Links"
+                text: i18n.tr("Links")
                 font.pixelSize: units.gu(2)
                 font.bold: true
                 color:AppTheme.getThemeColors(theme.name).textColorPrimary
@@ -86,7 +86,7 @@ Page {
             }
 
             Text {
-                text: "Source Code : https://github.com/karthagokul/ubcrypto"
+                text: i18n.tr("Source Code :") + "https://github.com/karthagokul/ubcrypto"
                 font.pixelSize: units.gu(1.6)
                 color:AppTheme.getThemeColors(theme.name).textColorPrimary
                 textFormat: Text.RichText

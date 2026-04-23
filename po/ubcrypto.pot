@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the ubcrypto package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ubcrypto\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-23 14:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/AboutPage.qml:29 ../qml/SplashScreen.qml:30 ubcrypto.desktop.in.h:1
+msgid "UBCrypto"
+msgstr ""
+
+#: ../qml/AboutPage.qml:38
+msgid ""
+"Your essential lightweight cryptocurrency tracking app for Ubuntu Touch. "
+"Stay informed with live market data, manage your personal portfolio, and "
+"enjoy a clean, intuitive user interface designed for mobile."
+msgstr ""
+
+#: ../qml/AboutPage.qml:51
+msgid "Key Features"
+msgstr ""
+
+#: ../qml/AboutPage.qml:80
+msgid "Links"
+msgstr ""
+
+#: ../qml/AboutPage.qml:89
+msgid "Source Code :"
+msgstr ""
+
+#: ../qml/AddCoinDialog.qml:24
+msgid "Coin Symbol (e.g. BTC)"
+msgstr ""
+
+#: ../qml/AddCoinDialog.qml:30
+msgid "Amount (e.g. 2.5)"
+msgstr ""
+
+#: ../qml/AddCoinDialog.qml:59 ../qml/NewPortfolioDialog.qml:38
+msgid "Cancel"
+msgstr ""
+
+#: ../qml/ChangeStats.qml:31
+msgid "1h:"
+msgstr ""
+
+#: ../qml/ChangeStats.qml:64
+msgid "24h:"
+msgstr ""
+
+#: ../qml/CoinCard.qml:93
+msgid "Volume: "
+msgstr ""
+
+#: ../qml/CoinDetailPage.qml:20
+msgid "Current Price: "
+msgstr ""
+
+#: ../qml/CoinDetailPage.qml:33
+msgid "Chart Placeholder"
+msgstr ""
+
+#: ../qml/CoinDetailPage.qml:42
+msgid "Add to Watchlist"
+msgstr ""
+
+#: ../qml/CoinDetailPage.qml:50
+msgid "Add to Portfolio"
+msgstr ""
+
+#: ../qml/DashboardPage.qml:128
+msgid "All"
+msgstr ""
+
+#: ../qml/DashboardPage.qml:129
+msgid "Top Gainers"
+msgstr ""
+
+#: ../qml/DashboardPage.qml:130
+msgid "Top Losers"
+msgstr ""
+
+#: ../qml/DashboardPage.qml:166
+msgid "Search coins..."
+msgstr ""
+
+#: ../qml/DashboardPage.qml:240
+msgid "No data available."
+msgstr ""
+
+#: ../qml/DashboardPage.qml:247 ../qml/NewsPage.qml:21
+#: ../qml/PortfolioPage.qml:35
+msgid "Refresh"
+msgstr ""
+
+#: ../qml/Main.qml:60
+msgid "HOME"
+msgstr ""
+
+#: ../qml/Main.qml:63
+msgid "PORTFOLIO"
+msgstr ""
+
+#: ../qml/Main.qml:66
+msgid "NEWS"
+msgstr ""
+
+#: ../qml/Main.qml:69
+msgid "ABOUT"
+msgstr ""
+
+#: ../qml/NewPortfolioDialog.qml:22
+msgid "Enter portfolio name"
+msgstr ""
+
+#: ../qml/NewPortfolioDialog.qml:28
+msgid "Create"
+msgstr ""
+
+#: ../qml/NewsPage.qml:218
+msgid "Read More"
+msgstr ""
+
+#: ../qml/PortfolioChart.qml:16
+msgid "Portfolio Value Over Time"
+msgstr ""
+
+#: ../qml/PortfolioChart.qml:33
+msgid "Value (€)"
+msgstr ""
+
+#: ../qml/PortfolioChart.qml:50
+msgid "Date"
+msgstr ""
+
+#: ../qml/PortfolioItem.qml:95
+msgid "Qty: "
+msgstr ""
+
+#: ../qml/PortfolioItem.qml:102
+msgid "Profit/Loss: "
+msgstr ""
+
+#: ../qml/PortfolioItem.qml:111
+msgid "Unit: €"
+msgstr ""
+
+#: ../qml/PortfolioItem.qml:119
+msgid "Current Value : €"
+msgstr ""
+
+#: ../qml/PortfolioPage.qml:20 ../qml/PortfolioPage.qml:25
+msgid "Portfolio"
+msgstr ""
+
+#: ../qml/PortfolioPage.qml:98
+msgid "Add Coin"
+msgstr ""
+
+#: ../qml/PortfolioPage.qml:108
+msgid "Your Holdings Worth"
+msgstr ""
+
+#: ../qml/SplashScreen.qml:41
+msgid "Your Market Insights, Instantly."
+msgstr ""

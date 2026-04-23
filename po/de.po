@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the ubcrypto package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ubcrypto\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-22 22:01+0000\n"
+"PO-Revision-Date: 2026-04-23 00:02+0200\n"
+"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: ../qml/AboutPage.qml:29 ../qml/SplashScreen.qml:30 ubcrypto.desktop.in.h:1
+msgid "UBCrypto"
+msgstr "UBCrypto"
+
+#: ../qml/AboutPage.qml:38
+msgid ""
+"Your essential lightweight cryptocurrency tracking app for Ubuntu Touch. "
+"Stay informed with live market data, manage your personal portfolio, and "
+"enjoy a clean, intuitive user interface designed for mobile."
+msgstr ""
+"Deine essentielle leichtgewichtige Cryptowährungsverfolgungsapp für Ubuntu "
+"Touch. Bleib informiert mit Echtzeit-Marktdaten, verwalte dein persönliches "
+"Portfolio und genieße eine aufgeräumte, intuitive Benutzeroberfläche für "
+"Mobilgeräte entwickelt."
+
+#: ../qml/AboutPage.qml:51
+msgid "Key Features"
+msgstr "Hauptfunktionen"
+
+#: ../qml/AboutPage.qml:80
+msgid "Links"
+msgstr "Links"
+
+#: ../qml/AboutPage.qml:89
+msgid "Source Code :"
+msgstr "Quellcode:"
+
+#: ../qml/AddCoinDialog.qml:24
+msgid "Coin Symbol (e.g. BTC)"
+msgstr "Coinkennzeichen (z.B. BTC)"
+
+#: ../qml/AddCoinDialog.qml:30
+msgid "Amount (e.g. 2.5)"
+msgstr "Menge (z.B. 2,5)"
+
+#: ../qml/AddCoinDialog.qml:59 ../qml/NewPortfolioDialog.qml:38
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ../qml/ChangeStats.qml:31
+msgid "1h:"
+msgstr "1 h:"
+
+#: ../qml/ChangeStats.qml:64
+msgid "24h:"
+msgstr "24 h:"
+
+#: ../qml/CoinCard.qml:93
+msgid "Volume: "
+msgstr "Volumen: "
+
+#: ../qml/CoinDetailPage.qml:20
+msgid "Current Price: "
+msgstr "Aktueller Preis: "
+
+#: ../qml/CoinDetailPage.qml:33
+msgid "Chart Placeholder"
+msgstr "Diagramm Platzhalter"
+
+#: ../qml/CoinDetailPage.qml:42
+msgid "Add to Watchlist"
+msgstr "Zur Watchlist hinzufügen"
+
+#: ../qml/CoinDetailPage.qml:50
+msgid "Add to Portfolio"
+msgstr "Zum Portfolio hinzufügen"
+
+#: ../qml/DashboardPage.qml:128
+msgid "All"
+msgstr "Alle"
+
+#: ../qml/DashboardPage.qml:129
+msgid "Top Gainers"
+msgstr "Top Gewinner"
+
+#: ../qml/DashboardPage.qml:130
+msgid "Top Losers"
+msgstr "Top Verlierer"
+
+#: ../qml/DashboardPage.qml:166
+msgid "Search coins..."
+msgstr "Coins suchen..."
+
+#: ../qml/DashboardPage.qml:240
+msgid "No data available."
+msgstr "Keine Daten verfügbar."
+
+#: ../qml/DashboardPage.qml:247 ../qml/NewsPage.qml:21
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+#: ../qml/Main.qml:60
+msgid "HOME"
+msgstr "START"
+
+#: ../qml/Main.qml:63
+msgid "PORTFOLIO"
+msgstr "PORTFOLIO"
+
+#: ../qml/Main.qml:66
+msgid "NEWS"
+msgstr "MELDUNGEN"
+
+#: ../qml/Main.qml:69
+msgid "ABOUT"
+msgstr "ÜBER"
+
+#: ../qml/NewPortfolioDialog.qml:22
+msgid "Enter portfolio name"
+msgstr "Portfolioname"
+
+#: ../qml/NewPortfolioDialog.qml:28
+msgid "Create"
+msgstr "Erstellen"
+
+#: ../qml/NewsPage.qml:218
+msgid "Read More"
+msgstr "Weiterlesen"
+
+#: ../qml/PortfolioChart.qml:16
+msgid "Portfolio Value Over Time"
+msgstr "Portfoliowert über die Zeit"
+
+#: ../qml/PortfolioChart.qml:33
+msgid "Value (€)"
+msgstr "Wert (€)"
+
+#: ../qml/PortfolioChart.qml:50
+msgid "Date"
+msgstr "Datum"
+
+#: ../qml/PortfolioItem.qml:95
+msgid "Qty: "
+msgstr "Menge: "
+
+#: ../qml/PortfolioItem.qml:102
+msgid "Profit/Loss: "
+msgstr "Gewinn/Verlust: "
+
+#: ../qml/PortfolioItem.qml:111
+msgid "Unit: €"
+msgstr "Einheit: €"
+
+#: ../qml/PortfolioItem.qml:119
+msgid "Current Value : €"
+msgstr "Aktueller Wert: €"
+
+#: ../qml/PortfolioPage.qml:19 ../qml/PortfolioPage.qml:24
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: ../qml/PortfolioPage.qml:71
+msgid "Add Coin"
+msgstr "Coin hinzufügen"
+
+#: ../qml/PortfolioPage.qml:81
+msgid "Your Holdings Worth"
+msgstr "Portfolio Gesamtwert"
+
+#: ../qml/SplashScreen.qml:41
+msgid "Your Market Insights, Instantly."
+msgstr "Deine Marktinformationen, in Echtzeit."

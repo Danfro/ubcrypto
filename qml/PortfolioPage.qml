@@ -16,12 +16,12 @@ Page {
             actions: [
                 Action {
                     iconName: "add"
-                    text: "Portfolio"
+                    text: i18n.tr("Portfolio")
                     onTriggered: newPortfolioDialog.open()
                 },
                 Action {
                     iconName: "delete"
-                    text: "Portfolio"
+                    text: i18n.tr("Portfolio")
                     onTriggered: {
                         if (selectedPortfolio !== -1) {
                             DB.deletePortfolio(selectedPortfolio)
@@ -68,7 +68,7 @@ Page {
                     }
                 }
                 Button {
-                    text: "Add Coin"
+                    text: i18n.tr("Add Coin")
                     enabled: (selectedPortfolio !== -1)
                     onClicked: {
                         addCoinDialog.open()
@@ -78,7 +78,7 @@ Page {
 
             // === Holdings Header ===
             Text {
-                text: "Your Holdings" + " Worth ($" + totalValue.toFixed(2)+")"
+                text: i18n.tr("Your Holdings Worth") + " (€" + totalValue.toFixed(2) + ")"
                 font.bold: true
                 font.pixelSize: units.gu(2.2)
             }

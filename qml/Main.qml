@@ -57,16 +57,16 @@ MainView {
             Repeater {
                 model: [
                     {
-                        name: "HOME"
+                        name: i18n.tr("HOME")
                     },
                     {
-                        name: "PORTFOLIO"
+                        name: i18n.tr("PORTFOLIO")
                     },
                     {
-                        name: "NEWS"
+                        name: i18n.tr("NEWS")
                     },
                     {
-                        name: "ABOUT"
+                        name: i18n.tr("ABOUT")
                     }
                 ]
 

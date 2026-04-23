@@ -19,13 +19,13 @@ Dialog {
 
         TextField {
             id: newPortfolioName
-            placeholderText: "Enter portfolio name"
+            text: i18n.tr("Enter portfolio name")
         }
 
         Row {
             spacing: units.gu(2)
             Button {
-                text: "Create"
+                text: i18n.tr("Create")
                 onClicked: {
                     if (newPortfolioName.text.length > 0) {
                         portfolioCreated(newPortfolioName.text);
@@ -35,7 +35,7 @@ Dialog {
                 }
             }
             Button {
-                text: "Cancel"
+                text: i18n.tr("Cancel")
                 onClicked: newPortfolioDialog.close()
             }
         }

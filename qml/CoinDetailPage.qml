@@ -17,7 +17,7 @@ Page {
         spacing: units.gu(2)
 
         Text {
-            text: "Current Price: " + price
+            text: i18n.tr("Current Price: ") + price
             font.pixelSize: units.gu(3)
         }
 
@@ -30,7 +30,7 @@ Page {
 
             Text {
                 anchors.centerIn: parent
-                text: "Chart Placeholder"
+                text: i18n.tr("Chart Placeholder")
                 color: "#666"
             }
         }
@@ -39,7 +39,7 @@ Page {
             spacing: units.gu(2)
 
             Button {
-                text: "Add to Watchlist"
+                text: i18n.tr("Add to Watchlist")
                 onClicked: {
                     console.log("Added to Watchlist");
                     // Save to local DB later
@@ -47,7 +47,7 @@ Page {
             }
 
             Button {
-                text: "Add to Portfolio"
+                text: i18n.tr("Add to Portfolio")
                 onClicked: {
                     console.log("Added to Portfolio");
                     // Save to local DB later

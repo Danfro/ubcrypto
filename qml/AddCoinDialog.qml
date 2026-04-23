@@ -21,13 +21,13 @@ Dialog {
 
         TextField {
             id: coinSymbolField
-            placeholderText: "Coin Symbol (e.g. BTC)"
+            placeholderText: i18n.tr("Coin Symbol (e.g. BTC)")
             readOnly: editMode  // make symbol non-editable in edit mode
         }
 
         TextField {
             id: coinAmountField
-            placeholderText: "Amount (e.g. 2.5)"
+            placeholderText: i18n.tr("Amount (e.g. 2.5)")
             inputMethodHints: Qt.ImhFormattedNumbersOnly
         }
 
@@ -56,7 +56,7 @@ Dialog {
             }
 
             Button {
-                text: "Cancel"
+                text: i18n.tr("Cancel")
                 onClicked: {
                     coinSymbolField.text = "";
                     coinAmountField.text = "";

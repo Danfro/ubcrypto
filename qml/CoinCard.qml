@@ -90,7 +90,7 @@ ListItem {
             }
 
             Text {
-                text: "Volume: " + formattedTotalVolume
+                text: i18n.tr("Volume: ") + formattedTotalVolume
                 font.pixelSize: units.gu(1.6)
                 color: AppTheme.getThemeColors(theme.name).textColorPrimary
             }
