@@ -121,7 +121,7 @@ Page {
 
             Row { // This Row lays out filter buttons horizontally
                 anchors.centerIn: parent
-                spacing: units.gu(1)
+                spacing: units.gu(3)
 
                 Repeater {
                     model: [
