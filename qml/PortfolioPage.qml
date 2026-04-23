@@ -2,6 +2,7 @@ import QtQuick 2.7
 import Lomiri.Components 1.3
 import QtQuick.Controls 2.2
 import QtQuick.Window 2.2
+import io.thp.pyotherside 1.4
 import "datastore.js" as DB
 import "theme.js" as AppTheme
 
@@ -11,7 +12,7 @@ Page {
     header: PageHeader {
         title: "Portfolio"
         ActionBar {
-            numberOfSlots: 2
+            numberOfSlots: 3
             anchors.right: parent.right
             actions: [
                 Action {
@@ -28,9 +29,35 @@ Page {
                             reloadPortfolios()
                         }
                     }
+                },
+                Action {
+                    iconName: "view-refresh"
+                    text: i18n.tr("Refresh")
+                    onTriggered: {
+                        python.call("cli.start_background_sync",  function (result) {
+                            console.log("Started")
+                        });
+                    }
                 }
 
             ]
+        }
+    }
+
+    Python {
+        id: python
+
+        Component.onCompleted: {
+            addImportPath(Qt.resolvedUrl("../src/"));
+            importModule("cli", function () {
+                python.call("cli.start_background_sync",  function (result) {
+                    console.log("Started")
+                });
+            });
+        }
+
+        onError: function (errorName, errorMessage, traceback) {
+            console.log("Python Error:", errorName, errorMessage, traceback);
         }
     }
 
@@ -79,6 +106,7 @@ Page {
             // === Holdings Header ===
             Text {
                 text: "Your Holdings" + " Worth ($" + totalValue.toFixed(2)+")"
+                color:AppTheme.getThemeColors(theme.name).textColorPrimary
                 font.bold: true
                 font.pixelSize: units.gu(2.2)
             }
