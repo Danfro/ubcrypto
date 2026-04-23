@@ -79,6 +79,7 @@ Page {
             // === Holdings Header ===
             Text {
                 text: "Your Holdings" + " Worth ($" + totalValue.toFixed(2)+")"
+                color:AppTheme.getThemeColors(theme.name).textColorPrimary
                 font.bold: true
                 font.pixelSize: units.gu(2.2)
             }
