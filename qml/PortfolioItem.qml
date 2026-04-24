@@ -92,14 +92,14 @@ ListItem {
                 spacing: units.gu(0.3)
 
                 Text {
-                    text: i18n.tr("Qty: ") + quantity
+                    text: i18n.tr("Qty: %1").arg(quantity.toString().replace(".",Qt.locale().decimalPoint))
                     font.pixelSize: units.gu(1.5)
                     color: AppTheme.getThemeColors(theme.name).textColorPrimary
                     horizontalAlignment: Text.AlignRight
                 }
 
                 PriceWidget {
-                    text: i18n.tr("Profit/Loss: ") + Number(delta).toFixed(2) + "€"
+                    text: i18n.tr("Profit/Loss: %1$").arg(Number(delta).toFixed(2).toString().replace(".",Qt.locale().decimalPoint))
                     value:Number(delta).toFixed(2)
                     font.bold: false
                     font.pixelSize: units.gu(1.5)
@@ -108,7 +108,7 @@ ListItem {
                 }
 
                 PriceWidget {
-                    text: i18n.tr("Unit: €") + Number(price).toFixed(2)
+                    text: i18n.tr("Unit: $%1").arg(Number(price).toFixed(2).toString().replace(".",Qt.locale().decimalPoint))
                     font.bold:false
                     font.pixelSize: units.gu(2)
                     color: AppTheme.getThemeColors(theme.name).textColorPrimary
@@ -116,7 +116,7 @@ ListItem {
                 }
 
                 PriceWidget {
-                    text: i18n.tr("Current Value : €") + Number(total_value).toFixed(2)
+                    text: i18n.tr("Current Value: $%1").arg(Number(total_value).toFixed(2).toString().replace(".",Qt.locale().decimalPoint))
                     font.bold:false
                     font.pixelSize: units.gu(2)
                     color: AppTheme.getThemeColors(theme.name).textColorPrimary

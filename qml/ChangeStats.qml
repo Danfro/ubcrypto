@@ -46,7 +46,7 @@ Item {
 
                 Text {
                     id: labelText
-                    text: (change1h >= 0 ? "+" : "") + change1h.toFixed(1) + "%"
+                    text: (change1h >= 0 ? "+" : "") + change1h.toFixed(1).toString().replace(".",Qt.locale().decimalPoint) + "%"
                     color: "white"
                     font.bold: true
                     font.pixelSize: units.gu(1.6)
@@ -75,7 +75,7 @@ Item {
 
                 Text {
                     id: labelText24
-                    text: (change24h >= 0 ? "+" : "") + change24h.toFixed(1) + "%"
+                    text: (change24h >= 0 ? "+" : "") + change24h.toFixed(1).toString().replace(".",Qt.locale().decimalPoint) + "%"
                     color: "white"
                     font.bold: true
                     font.pixelSize: units.gu(1.6)
@@ -96,7 +96,7 @@ Item {
                 font.pixelSize: units.gu(1.5)
             }
             Text {
-                text: (change7d >= 0 ? "+" : "") + change7d.toFixed(2) + "%"
+                text: (change7d >= 0 ? "+" : "") + change7d.toFixed(2).toString().replace(".",Qt.locale().decimalPoint) + "%"
                 color: change7d >= 0 ? "green" : "red"
                 font.pixelSize: units.gu(1.5)
                // font.bold: true
@@ -114,7 +114,7 @@ Item {
                 font.pixelSize: units.gu(1.5)
             }
             Text {
-                text: (change30d >= 0 ? "+" : "") + change30d.toFixed(2) + "%"
+                text: (change30d >= 0 ? "+" : "") + change30d.toFixed(2).toString().replace(".",Qt.locale().decimalPoint) + "%"
                 color: change30d >= 0 ? "green" : "red"
                 font.pixelSize: units.gu(1.5)
                //  font.bold: true

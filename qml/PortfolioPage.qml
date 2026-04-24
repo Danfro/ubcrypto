@@ -78,7 +78,8 @@ Page {
 
             // === Holdings Header ===
             Text {
-                text: i18n.tr("Your Holdings Worth") + " (€" + totalValue.toFixed(2) + ")"
+                text: i18n.tr("Your Holdings Worth") + ": $ " + totalValue.toFixed(2).toString().replace(".",Qt.locale().decimalPoint))
+                color:AppTheme.getThemeColors(theme.name).textColorPrimary
                 font.bold: true
                 font.pixelSize: units.gu(2.2)
             }

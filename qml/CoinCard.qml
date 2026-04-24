@@ -23,7 +23,7 @@ ListItem {
     property real price_change_percentage_7d: 0
     property real price_change_percentage_30d: 0
 
-    property string formattedTotalVolume: coinCard.formatLargeNumber(totalVolume) // New property
+    property string formattedTotalVolume: coinCard.formatLargeNumber(totalVolume).toString().replace(".",Qt.locale().decimalPoint) // New property
 
     // Use Layout.implicitHeight for contentRow wrapped by RowLayout
     implicitHeight: contentLayout.implicitHeight + units.gu(2) // Adding padding for top/bottom

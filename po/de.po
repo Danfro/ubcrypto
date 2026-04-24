@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubcrypto\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-22 22:01+0000\n"
-"PO-Revision-Date: 2026-04-23 00:02+0200\n"
+"POT-Creation-Date: 2026-04-24 18:15+0000\n"
+"PO-Revision-Date: 2026-04-24 20:18+0200\n"
 "Last-Translator: Daniel Frost <one@frostinfo.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -65,6 +65,14 @@ msgstr "1 h:"
 msgid "24h:"
 msgstr "24 h:"
 
+#: ../qml/ChangeStats.qml:94
+msgid "7d:"
+msgstr "7d:"
+
+#: ../qml/ChangeStats.qml:112
+msgid "30d:"
+msgstr "30d:"
+
 #: ../qml/CoinCard.qml:93
 msgid "Volume: "
 msgstr "Volumen: "
@@ -106,6 +114,7 @@ msgid "No data available."
 msgstr "Keine Daten verfügbar."
 
 #: ../qml/DashboardPage.qml:247 ../qml/NewsPage.qml:21
+#: ../qml/PortfolioPage.qml:35
 msgid "Refresh"
 msgstr "Aktualisieren"
 
@@ -142,38 +151,38 @@ msgid "Portfolio Value Over Time"
 msgstr "Portfoliowert über die Zeit"
 
 #: ../qml/PortfolioChart.qml:33
-msgid "Value (€)"
-msgstr "Wert (€)"
+msgid "Value ($)"
+msgstr "Wert ($)"
 
 #: ../qml/PortfolioChart.qml:50
 msgid "Date"
 msgstr "Datum"
 
 #: ../qml/PortfolioItem.qml:95
-msgid "Qty: "
-msgstr "Menge: "
+msgid "Qty: %1"
+msgstr "Menge: %1"
 
 #: ../qml/PortfolioItem.qml:102
-msgid "Profit/Loss: "
-msgstr "Gewinn/Verlust: "
+msgid "Profit/Loss: %1$"
+msgstr "Gewinn/Verlust: %1 $"
 
 #: ../qml/PortfolioItem.qml:111
-msgid "Unit: €"
-msgstr "Einheit: €"
+msgid "Unit: $%1"
+msgstr "Einheit: $%1"
 
 #: ../qml/PortfolioItem.qml:119
-msgid "Current Value : €"
-msgstr "Aktueller Wert: €"
+msgid "Current Value: $%1"
+msgstr "Aktueller Wert: $ %1"
 
-#: ../qml/PortfolioPage.qml:19 ../qml/PortfolioPage.qml:24
+#: ../qml/PortfolioPage.qml:20 ../qml/PortfolioPage.qml:25
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: ../qml/PortfolioPage.qml:71
+#: ../qml/PortfolioPage.qml:98
 msgid "Add Coin"
 msgstr "Coin hinzufügen"
 
-#: ../qml/PortfolioPage.qml:81
+#: ../qml/PortfolioPage.qml:108
 msgid "Your Holdings Worth"
 msgstr "Portfolio Gesamtwert"
 
