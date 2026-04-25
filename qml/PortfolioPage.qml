@@ -2,7 +2,6 @@ import QtQuick 2.7
 import Lomiri.Components 1.3
 import QtQuick.Controls 2.2
 import QtQuick.Window 2.2
-import io.thp.pyotherside 1.4
 import "datastore.js" as DB
 import "theme.js" as AppTheme
 
@@ -33,31 +32,9 @@ Page {
                 Action {
                     iconName: "view-refresh"
                     text: i18n.tr("Refresh")
-                    onTriggered: {
-                        python.call("cli.start_background_sync",  function (result) {
-                            console.log("Started")
-                        });
-                    }
+                    onTriggered: reloadPortfolios()
                 }
-
             ]
-        }
-    }
-
-    Python {
-        id: python
-
-        Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl("../src/"));
-            importModule("cli", function () {
-                python.call("cli.start_background_sync",  function (result) {
-                    console.log("Started")
-                });
-            });
-        }
-
-        onError: function (errorName, errorMessage, traceback) {
-            console.log("Python Error:", errorName, errorMessage, traceback);
         }
     }
 
