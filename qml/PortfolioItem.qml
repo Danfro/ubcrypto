@@ -103,7 +103,7 @@ ListItem {
                     value:Number(delta).toFixed(2)
                     font.bold: false
                     font.pixelSize: units.gu(1.5)
-                    color: Number(delta) < -1 ? "red" : "#2e7d32"  // red for loss, green for profit
+                    color: Number(delta) < 0 ? "red" : "#2e7d32"  // red for loss, green for profit
                     horizontalAlignment: Text.AlignRight
                 }
 
