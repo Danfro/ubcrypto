@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubcrypto\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-24 18:15+0000\n"
+"POT-Creation-Date: 2026-04-25 14:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,6 +48,14 @@ msgstr ""
 msgid "Amount (e.g. 2.5)"
 msgstr ""
 
+#: ../qml/AddCoinDialog.qml:38
+msgid "Add"
+msgstr ""
+
+#: ../qml/AddCoinDialog.qml:38
+msgid "Update"
+msgstr ""
+
 #: ../qml/AddCoinDialog.qml:59 ../qml/NewPortfolioDialog.qml:38
 msgid "Cancel"
 msgstr ""
@@ -58,14 +66,6 @@ msgstr ""
 
 #: ../qml/ChangeStats.qml:64
 msgid "24h:"
-msgstr ""
-
-#: ../qml/ChangeStats.qml:94
-msgid "7d:"
-msgstr ""
-
-#: ../qml/ChangeStats.qml:112
-msgid "30d:"
 msgstr ""
 
 #: ../qml/CoinCard.qml:93
@@ -109,7 +109,6 @@ msgid "No data available."
 msgstr ""
 
 #: ../qml/DashboardPage.qml:247 ../qml/NewsPage.qml:21
-#: ../qml/PortfolioPage.qml:35
 msgid "Refresh"
 msgstr ""
 
@@ -169,15 +168,15 @@ msgstr ""
 msgid "Current Value: $%1"
 msgstr ""
 
-#: ../qml/PortfolioPage.qml:20 ../qml/PortfolioPage.qml:25
+#: ../qml/PortfolioPage.qml:19 ../qml/PortfolioPage.qml:24
 msgid "Portfolio"
 msgstr ""
 
-#: ../qml/PortfolioPage.qml:98
+#: ../qml/PortfolioPage.qml:71
 msgid "Add Coin"
 msgstr ""
 
-#: ../qml/PortfolioPage.qml:108
+#: ../qml/PortfolioPage.qml:81
 msgid "Your Holdings Worth"
 msgstr ""
 

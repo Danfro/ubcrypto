@@ -35,7 +35,7 @@ Dialog {
             spacing: units.gu(2)
 
             Button {
-                text: editMode ? "Update" : "Add"
+                text: editMode ? i18n.tr("Update") : i18n.tr("Add")
                 onClicked: {
                     if (coinSymbolField.text && coinAmountField.text) {
                         var symbol = coinSymbolField.text;

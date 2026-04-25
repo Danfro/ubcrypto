@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubcrypto\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-24 18:15+0000\n"
-"PO-Revision-Date: 2026-04-24 20:18+0200\n"
+"POT-Creation-Date: 2026-04-25 14:41+0000\n"
+"PO-Revision-Date: 2026-04-25 16:42+0200\n"
 "Last-Translator: Daniel Frost <one@frostinfo.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -53,6 +53,14 @@ msgstr "Coinkennzeichen (z.B. BTC)"
 msgid "Amount (e.g. 2.5)"
 msgstr "Menge (z.B. 2,5)"
 
+#: ../qml/AddCoinDialog.qml:38
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: ../qml/AddCoinDialog.qml:38
+msgid "Update"
+msgstr "Aktualisieren"
+
 #: ../qml/AddCoinDialog.qml:59 ../qml/NewPortfolioDialog.qml:38
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -64,14 +72,6 @@ msgstr "1 h:"
 #: ../qml/ChangeStats.qml:64
 msgid "24h:"
 msgstr "24 h:"
-
-#: ../qml/ChangeStats.qml:94
-msgid "7d:"
-msgstr "7d:"
-
-#: ../qml/ChangeStats.qml:112
-msgid "30d:"
-msgstr "30d:"
 
 #: ../qml/CoinCard.qml:93
 msgid "Volume: "
@@ -114,7 +114,6 @@ msgid "No data available."
 msgstr "Keine Daten verfügbar."
 
 #: ../qml/DashboardPage.qml:247 ../qml/NewsPage.qml:21
-#: ../qml/PortfolioPage.qml:35
 msgid "Refresh"
 msgstr "Aktualisieren"
 
@@ -174,18 +173,24 @@ msgstr "Einheit: $%1"
 msgid "Current Value: $%1"
 msgstr "Aktueller Wert: $ %1"
 
-#: ../qml/PortfolioPage.qml:20 ../qml/PortfolioPage.qml:25
+#: ../qml/PortfolioPage.qml:19 ../qml/PortfolioPage.qml:24
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: ../qml/PortfolioPage.qml:98
+#: ../qml/PortfolioPage.qml:71
 msgid "Add Coin"
 msgstr "Coin hinzufügen"
 
-#: ../qml/PortfolioPage.qml:108
+#: ../qml/PortfolioPage.qml:81
 msgid "Your Holdings Worth"
 msgstr "Portfolio Gesamtwert"
 
 #: ../qml/SplashScreen.qml:41
 msgid "Your Market Insights, Instantly."
 msgstr "Deine Marktinformationen, in Echtzeit."
+
+#~ msgid "7d:"
+#~ msgstr "7d:"
+
+#~ msgid "30d:"
+#~ msgstr "30d:"
