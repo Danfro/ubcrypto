@@ -75,44 +75,102 @@ def get_coins(limit=1000):
     pages = (limit + per_page - 1) // per_page
     results = []
 
+    # Rate-limiting / retry config
+    max_retries = 3
+    min_wait_on_429 = 60           # wait at least 60s when a 429 is received
+    calls_per_minute = 10          # target pacing inside the allowed limit of 5 - 15 calls per minute
+    min_interval = 60.0 / calls_per_minute
+
+    last_request_time = 0.0
+
     for page in range(1, pages + 1):
         # Construct the URL for the current page
         url = f"{COINGECKO_BASE}/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page={per_page}&page={page}&sparkline=false&price_change_percentage=1h,24h,7d,30d,90d"
-        #log.debug(f"[API] Fetching page {page}: {url}")
 
-        try:
-            # Use the requests session for the API call
-            response = session.get(url, timeout=30) # Increased timeout for data fetches
-            response.raise_for_status() # Raise HTTPError for bad responses (4xx or 5xx)
+        retries = 0
+        while retries <= max_retries:
+            # pace requests to respect target rate
+            elapsed = time.time() - last_request_time
+            if elapsed < min_interval:
+                time.sleep(min_interval - elapsed)
 
-            raw_data = response.content # Get raw bytes
-            #log.debug(f"Raw response for page {page}: {raw_data[:200]}...") # Log first 200 bytes
-            data = json.loads(raw_data.decode("utf-8"))
+            try:
+                # Use the requests session for the API call
+                response = session.get(url, timeout=30)  # Increased timeout for data fetches
+                last_request_time = time.time()
 
-            if not isinstance(data, list):
-                log.error(f"[Error] Unexpected data format for page {page}: {data}")
-                continue
+                # Explicit handling for rate limiting (429)
+                if response.status_code == 429:
+                    retry_after = response.headers.get("Retry-After")
+                    if retry_after is not None:
+                        try:
+                            wait = max(min_wait_on_429, int(retry_after))
+                        except ValueError:
+                            wait = min_wait_on_429
+                    else:
+                        wait = min_wait_on_429
 
-            for coin in data:
-                results.append({
-                    "id": coin.get("id"),
-                    "name": coin.get("name"),
-                    "symbol": coin.get("symbol", "").upper(),
-                    "price": coin.get("current_price"),
-                    "change24h": coin.get("price_change_percentage_24h"),
-                    "image": coin.get("image"),
-                    "json": coin, # Keep the full JSON for debugging or future use
-                })
-        except requests.exceptions.HTTPError as e:
-            log.error(f"[HTTP Error] Page {page} failed with status {e.response.status_code}: {e.response.text}")
-        except requests.exceptions.ConnectionError as e:
-            log.error(f"[Connection Error] Page {page} failed: {e}. Check network and DNS resolution.")
-        except requests.exceptions.Timeout as e:
-            log.error(f"[Timeout Error] Page {page} timed out: {e}")
-        except json.JSONDecodeError as e:
-            log.error(f"[JSON Decode Error] Page {page} failed to parse JSON: {e}")
-        except Exception as e:
-            log.error(f"[Unexpected Error] Page {page} failed: {e}", exc_info=True) # exc_info to get traceback
+                    log.warning(f"[Rate Limit] Page {page} 429 received. Waiting {wait}s before retry #{retries+1}.")
+                    time.sleep(wait)
+                    retries += 1
+                    continue
+
+                response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
+
+                raw_data = response.content  # Get raw bytes
+                data = json.loads(raw_data.decode("utf-8"))
+
+                if not isinstance(data, list):
+                    log.error(f"[Error] Unexpected data format for page {page}: {data}")
+                    break  # skip this page and continue with next
+
+                for coin in data:
+                    results.append({
+                        "id": coin.get("id"),
+                        "name": coin.get("name"),
+                        "symbol": coin.get("symbol", "").upper(),
+                        "price": coin.get("current_price"),
+                        "change24h": coin.get("price_change_percentage_24h"),
+                        "image": coin.get("image"),
+                        "json": coin,  # Keep the full JSON for debugging or future use
+                    })
+                break  # success -> exit retry loop
+
+            except requests.exceptions.HTTPError as e:
+                status = e.response.status_code if e.response is not None else None
+                if status == 429:
+                    retry_after = e.response.headers.get("Retry-After") if e.response is not None else None
+                    try:
+                        wait = max(min_wait_on_429, int(retry_after)) if retry_after else min_wait_on_429
+                    except ValueError:
+                        wait = min_wait_on_429
+                    log.warning(f"[HTTPError 429] Page {page}: waiting {wait}s before retry #{retries+1}.")
+                    time.sleep(wait)
+                    retries += 1
+                    continue
+
+                log.error(f"[HTTP Error] Page {page} failed with status {status}: {e.response.text if e.response is not None else e}")
+                break
+
+            except requests.exceptions.ConnectionError as e:
+                log.error(f"[Connection Error] Page {page} failed: {e}. Check network and DNS resolution.")
+                break
+
+            except requests.exceptions.Timeout as e:
+                log.error(f"[Timeout Error] Page {page} timed out: {e}")
+                break
+
+            except json.JSONDecodeError as e:
+                log.error(f"[JSON Decode Error] Page {page} failed to parse JSON: {e}")
+                break
+
+            except Exception as e:
+                log.error(f"[Unexpected Error] Page {page} failed: {e}", exc_info=True)  # exc_info to get traceback
+                break
+
+        else:
+            # executed if while loop exhausted without break (i.e., retries exceeded)
+            log.error(f"[Rate Limit] Page {page} exhausted retries ({max_retries}). Skipping page.")
 
     # Return only up to the specified limit
     return results[:limit]
